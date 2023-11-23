@@ -172,20 +172,20 @@ Please write your answers here
 
 20. The boot process of XV6 involves a series of steps that transition the computer from power-on to a state where the XV6 kernel is ready to execute. These steps involve the interaction of hardware components, firmware, and the XV6 bootloader.
 
-   - 1. BIOS Initialization: Upon power on, the Basic Input/Output System (BIOS) takes control and performs a series of low-level initializations, including:
+   - a. BIOS Initialization: Upon power on, the Basic Input/Output System (BIOS) takes control and performs a series of low-level initializations, including:
             - POST (Power-On Self Test): Verifies the integrity of hardware components like CPU, memory, and peripherals.
             - ROM Code Execution: Executes code stored in ROM to initialize chipset, display, and other essential hardware.
             - Boot Device Selection: Determines the boot device based on BIOS settings or user input.
 
-   - 2. Bootloader Loading: The BIOS loads the bootloader, a small program responsible for loading the operating system, from the selected boot device. The bootloader typically resides in the first sector of the boot disk.
+   - b. Bootloader Loading: The BIOS loads the bootloader, a small program responsible for loading the operating system, from the selected boot device. The bootloader typically resides in the first sector of the boot disk.
 
-   - 3. Bootloader Execution: Once loaded, the bootloader executes and performs the following tasks:
+   - c. Bootloader Execution: Once loaded, the bootloader executes and performs the following tasks:
             - Stage 1 Bootloader: Loads the stage 2 bootloader into memory.
             - Stage 2 Bootloader (XV6 Bootloader): Loads the XV6 kernel into memory and sets up the initial page table.
         
-   - 4. XV6 Kernel Initialization: The XV6 kernel takes control and begins its initialization process, including:
+   - d. XV6 Kernel Initialization: The XV6 kernel takes control and begins its initialization process, including:
             - Memory Management: Initializes memory management structures and allocates memory for kernel data structures.
             - Device Drivers: Initializes device drivers for basic hardware like the console and keyboard.
             - Process Management: Creates the initial process, which will eventually launch the shell.
 
-   - 5. Shell Execution: The initial process launches the shell, which provides a user interface for interacting with the XV6 operating system
+   - e. Shell Execution: The initial process launches the shell, which provides a user interface for interacting with the XV6 operating system
