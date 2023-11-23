@@ -188,4 +188,4 @@ Please write your answers here
             - Device Drivers: Initializes device drivers for basic hardware like the console and keyboard.
             - Process Management: Creates the initial process, which will eventually launch the shell.
 
-5. Shell Execution: The initial process launches the shell, which provides a user interface for interacting with the XV6 operating system
+   - 5. Shell Execution: The initial process launches the shell, which provides a user interface for interacting with the XV6 operating system
