@@ -117,3 +117,38 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 
 ## Answers
 Please write your answers here
+1. b. A Unix-like operating system
+2. b. Linux
+3. d. simple
+4. b. As interrupts
+5. a. 128
+6. c. Sh
+7. a. Round-robin scheduling
+8. a. Paging
+9. d. Both b and c
+10. b. No
+11. c. MIT
+
+12. The different states a process can be in within the XV6 operating system are as follows:
+     a. UNUSED: This is the initial state of a process before it is created.
+     b. EMBRYO: This state is entered immediately after a process is created. The process is allocated a process control block (PCB) and various resources, but it is not yet ready to run.
+     c. SLEEPING: A process enters the sleeping state when it is waiting for an event to occur, such as I/O completion or a signal from another process.
+     d. RUNNABLE: This state indicates that a process is ready to run, but it is not currently scheduled to execute on the CPU.
+     e. RUNNING: The running state is when a process is actively executing instructions on the CPU.
+     f. ZOMBIE: A process enters the zombie state when it has finished executing its code, but its parent process has not yet called the wait() system call to collect its exit status. The zombie process is still occupying memory, but it cannot be scheduled to run.
+
+13. The file system in XV6 is a simple implementation of a hierarchical file system. It consists of the following key components:
+      a. DISK: This layer reads and writes blocks on an virtio hard drive.
+      b. BUFFER CACHE: This layer caches disk blocks and synchronizes access to them, making sure that only one kernel process at a time can modify the data stored in any particular block.
+      c. LOGGING: This layer allows higher layers to wrap updates to several blocks in a transaction, and ensures that the blocks are updated atomically in the face of crashes (i.e., all of them are updated or none).
+      d. INODE:  This layer provides individual files, each represented as an inode with a unique i-number and some blocks holding the file’s data.
+      e. Directory: This layer implements each directory as a special kind of inode whose content is a sequence of directory entries, each of which contains a file’s name and i-number.
+      f. Pathname: This layer provides hierarchical path names like /usr/rtm/xv6/fs.c, and resolves them with recursive lookup.
+      g. File Descriptor: The layer abstracts many Unix resources (e.g., pipes, devices, files, etc.) using the file system interface, simplifying the lives of application programmers.
+     
+      
+        
+
+
+19. Virtual memory is a memory management technique where secondary memory can be used as if it were a part of the main memory.
+    There is no concept of virtual memory in XV6.
